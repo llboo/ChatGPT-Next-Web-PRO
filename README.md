@@ -3,6 +3,8 @@
 
 <h1 align="center">ChatGPT Next Web</h1>
 
+基于大佬前端，接入自有管理后台，实现：公众号注册/登录（引流用）、用户授权、支付管理、卡密兑换、KEY管理分发等<br/>
+
 English / [简体中文](./README_CN.md)
 
 One-Click to get well-designed cross-platform ChatGPT web UI.
