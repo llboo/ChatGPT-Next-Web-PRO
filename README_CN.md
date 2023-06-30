@@ -3,68 +3,21 @@
 
 <h1 align="center">ChatGPT Next Web</h1>
 
+基于大佬前端，接入自有管理后台，实现：公众号注册/登录（引流用）、用户授权、支付管理、卡密兑换、KEY管理分发等<br/>
+[PRO版前端Demo](https://uai.uslinks.cn/) / [PRO版后端Demo](https://uai.uslinks.cn/) <br/>
+
+[点击添加QQ交流群](http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=OtOrr8d3r9LSrHSuwQOg2Gfyv-JRBb6j&authKey=Hz%2BbOlroGbLB%2BOw5i3rdssexzGMkUUsx9Qg%2FXpSs8jezMBqBTpvti1q4G7uqBR0V&noverify=0&group_code=869937959) 
+
+------------------------------------以下为原始说明文件------------------------------------
+
 一键免费部署你的私人 ChatGPT 网页应用。
-
-[演示 Demo](https://chat-gpt-next-web.vercel.app/) / [反馈 Issues](https://github.com/Yidadaa/ChatGPT-Next-Web/issues) / [加入 Discord](https://discord.gg/zrhvHCr79N) / [QQ 群](https://user-images.githubusercontent.com/16968934/228190818-7dd00845-e9b9-4363-97e5-44c507ac76da.jpeg) / [打赏开发者](https://user-images.githubusercontent.com/16968934/227772541-5bcd52d8-61b7-488c-a203-0330d8006e2b.jpg) / [Donate](#捐赠-donate-usdt)
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FYidadaa%2FChatGPT-Next-Web&env=OPENAI_API_KEY&env=CODE&project-name=chatgpt-next-web&repository-name=ChatGPT-Next-Web)
-
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/Yidadaa/ChatGPT-Next-Web)
 
 ![主界面](./docs/images/cover.png)
 
 </div>
 
-## 开始使用
-
-1. 准备好你的 [OpenAI API Key](https://platform.openai.com/account/api-keys);
-2. 点击右侧按钮开始部署：
-   [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FYidadaa%2FChatGPT-Next-Web&env=OPENAI_API_KEY&env=CODE&project-name=chatgpt-next-web&repository-name=ChatGPT-Next-Web)，直接使用 Github 账号登录即可，记得在环境变量页填入 API Key 和[页面访问密码](#配置页面访问密码) CODE；
-3. 部署完毕后，即可开始使用；
-4. （可选）[绑定自定义域名](https://vercel.com/docs/concepts/projects/domains/add-a-domain)：Vercel 分配的域名 DNS 在某些区域被污染了，绑定自定义域名即可直连。
-
-## 保持更新
-
-如果你按照上述步骤一键部署了自己的项目，可能会发现总是提示“存在更新”的问题，这是由于 Vercel 会默认为你创建一个新项目而不是 fork 本项目，这会导致无法正确地检测更新。
-推荐你按照下列步骤重新部署：
-
-- 删除掉原先的仓库；
-- 使用页面右上角的 fork 按钮，fork 本项目；
-- 在 Vercel 重新选择并部署，[请查看详细教程](./docs/vercel-cn.md#如何新建项目)。
-
-### 打开自动更新
-
-> 如果你遇到了 Upstream Sync 执行错误，请手动 Sync Fork 一次！
-
-当你 fork 项目之后，由于 Github 的限制，需要手动去你 fork 后的项目的 Actions 页面启用 Workflows，并启用 Upstream Sync Action，启用之后即可开启每小时定时自动更新：
-
-![自动更新](./docs/images/enable-actions.jpg)
-
-![启用自动更新](./docs/images/enable-actions-sync.jpg)
-
-### 手动更新代码
-
-如果你想让手动立即更新，可以查看 [Github 的文档](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork) 了解如何让 fork 的项目与上游代码同步。
-
-你可以 star/watch 本项目或者 follow 作者来及时获得新功能更新通知。
-
-## 配置页面访问密码
-
-> 配置密码后，用户需要在设置页手动填写访问码才可以正常聊天，否则会通过消息提示未授权状态。
-
-> **警告**：请务必将密码的位数设置得足够长，最好 7 位以上，否则[会被爆破](https://github.com/Yidadaa/ChatGPT-Next-Web/issues/518)。
-
-本项目提供有限的权限控制功能，请在 Vercel 项目控制面板的环境变量页增加名为 `CODE` 的环境变量，值为用英文逗号分隔的自定义密码：
-
-```
-code1,code2,code3
-```
-
-增加或修改该环境变量后，请**重新部署**项目使改动生效。
 
 ## 环境变量
-
-> 本项目大多数配置项都通过环境变量来设置，教程：[如何修改 Vercel 环境变量](./docs/vercel-cn.md)。
 
 ### `OPENAI_API_KEY` （必填项）
 
@@ -104,9 +57,6 @@ OpenAI 接口代理 URL，如果你手动配置了 openai 接口代理，请填�
 
 ## 开发
 
-点击下方按钮，开始二次开发：
-
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/Yidadaa/ChatGPT-Next-Web)
 
 在开始写代码之前，需要在项目根目录新建一个 `.env.local` 文件，里面填入环境变量：
 
@@ -171,16 +121,16 @@ bash <(curl -s https://raw.githubusercontent.com/Yidadaa/ChatGPT-Next-Web/main/s
 
 ## 鸣谢
 
+ChatGPT-Next-Web
+
 ### 捐赠者
 
-> 见英文版。
+> waiting..
 
 ### 贡献者
 
-[见项目贡献者列表](https://github.com/Yidadaa/ChatGPT-Next-Web/graphs/contributors)
+> waiting..
 
 ## 开源协议
-
-> 反对 996，从我开始。
 
 [Anti 996 License](https://github.com/kattgu7/Anti-996-License/blob/master/LICENSE_CN_EN)
